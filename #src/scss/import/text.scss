@@ -1,10 +1,15 @@
 .text-huge{
   font-weight: 900;
+  line-height: 120%;
   font-size: 72px;
+  @media (max-width:$md3+px) {
+      font-size: 36px;
+  }
 }
 
 .text-medium{
   font-weight: 900;
+  line-height: 120%;
   font-size: 40px;
   @media (max-width:$md3+px) {
       font-size: 30px;
@@ -12,10 +17,12 @@
 }
 
 .text-default{
+  line-height: 120%;
   font-size: 24px;
 }
 
 .text-small{
+  line-height: 120%;
   font-size: 18px;
 }
 
