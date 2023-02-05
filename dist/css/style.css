@@ -251,6 +251,21 @@ h6 {
   color: #FFFFFF;
 }
 
+.card-v2 {
+  border-radius: 28px;
+  background-color: #2B2B42;
+  padding: 26px;
+  display: inline-block;
+}
+
+.card-v2 img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48px;
+          flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+}
+
 .num {
   width: 64px;
   height: 64px;
@@ -656,6 +671,42 @@ video {
   padding: 16px;
 }
 
+.ourSkills {
+  overflow: hidden;
+}
+
+.ourSkills__row {
+  margin: -16px -16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ourSkills__col {
+  padding: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.ourSkills__card {
+  height: 100%;
+}
+
+.ourSkills__card_1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#C7EBFF), to(#BFFFD5));
+  background: -o-linear-gradient(top, #C7EBFF 0%, #BFFFD5 100%);
+  background: linear-gradient(180deg, #C7EBFF 0%, #BFFFD5 100%);
+}
+
+.ourSkills__card_2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFC7CA), to(#DBBFFF));
+  background: -o-linear-gradient(top, #FFC7CA 0%, #DBBFFF 100%);
+  background: linear-gradient(180deg, #FFC7CA 0%, #DBBFFF 100%);
+}
+
 .launchingDrops__body {
   background: -webkit-gradient(linear, left top, left bottom, from(#FFD9E0), to(#E2E7FF));
   background: -o-linear-gradient(top, #FFD9E0 0%, #E2E7FF 100%);
@@ -905,7 +956,17 @@ video {
   background: linear-gradient(180deg, #64FFB5 0%, #00A656 100%);
 }
 
+@media (min-width: 479.98px) {
+  .ourSkills__card {
+    min-width: 360px;
+  }
+}
+
 @media (min-width: 767.98px) {
+  .ourSkills__card {
+    padding-right: 48px;
+  }
+
   .launchingDrops__arrow_1 {
     -webkit-box-align: end;
         -ms-flex-align: end;

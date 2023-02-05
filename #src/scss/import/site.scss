@@ -5,6 +5,35 @@
 	}
 }
 
+.ourSkills {
+	overflow: hidden;
+	&__row {
+		margin: -16px -16px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__col {
+		padding: 16px;
+		flex: 1 1 50%;
+	}
+	&__card {
+		height: 100%;
+		@media (min-width:$md4+px) {
+		    min-width: 360px;
+		}
+		@media (min-width:$md3+px) {
+		    padding-right: 48px;
+		}
+		&_1 {
+			background: linear-gradient(180deg, #C7EBFF 0%, #BFFFD5 100%);
+		}
+		&_2 {
+			background: linear-gradient(180deg, #FFC7CA 0%, #DBBFFF 100%);
+		}
+	}
+}
+
+
 .launchingDrops {
 	&__body {
 		background: linear-gradient(180deg, #FFD9E0 0%, #E2E7FF 100%);

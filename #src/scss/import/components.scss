@@ -77,6 +77,18 @@
 	color: $white;
 }
 
+.card-v2{
+	border-radius: 28px;
+	background-color: $black;
+	padding: 26px;
+	display: inline-block;
+	img{
+		flex: 0 0 48px;
+		width: 48px;
+		height: 48px;
+	}
+}
+
 .num{
 	width: 64px;
 	height: 64px;
