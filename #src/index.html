@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/jquery-3.5.1.min.js"></script>
 	<script src="js/script.js"></script>
 	<title>Document</title>
 </head>
@@ -17,11 +16,69 @@
 					<img width="162" height="24" src="img/logo-text.svg" alt="">
 					<img width="104" height="32" src="img/logo-pbn-b21.svg" alt="">
 				</div>
-				<button class="btn-2 md3-dn">Замовити</button>
+				<button class="btn-2 md3-dn js-show-popup">Замовити</button>
 			</div>
 		</div>
 	</header>
 
+	<!-- fScreen -->
+	<div class="fScreen">
+		<div class="container padding-wrap">
+			<p class="fScreen__title text-huge title-wrap ta-c">Посилання з головних у складчину <span class="ws-n">по 50$<img width="120" height="115" src="img/ewg.svg" alt=""></span></p>
+			<div class="fScreen__content">
+				<img class="fScreen__image0" width="517" height="160" src="img/pbn-b21.svg" alt="">
+			</div>
+			<div class="fScreen__row">
+				<div class="fScreen__col">
+					<img class="fScreen__image1" width="240" height="67" src="img/pbn-b2.svg" alt="">
+					<img class="fScreen__image2" src="img/arrow-s.svg" alt="">
+					<p class="mt-16">Клікніть, якщо не знайомі</p>
+				</div>
+				<div class="fScreen__col">
+					<img class="fScreen__image3" src="img/fScreen_image_2.svg" alt="">
+				</div>
+				<div class="fScreen__col">
+					<img width="200" height="200" src="img/534543545.svg" alt="">
+					<p class="mt-16">Бюджет на посилання 1000 – 2000$</p>
+				</div>
+			</div>
+			<p class="color-darkGray text-small mt-16">*сумарний  профіль посилань як у дропа по 500–1500$</p>
+		</div>
+	</div>
+
+	<!-- Як рахується ціна посилань на дроп? -->
+	<div class="priceCalculated">
+		<div class="container padding-wrap">
+			<div class="priceCalculated__body nlc-mb-32 card-wrap">
+				<p class="text-medium">Як рахується ціна посилань на дроп?</p>
+				<p>Для кожної тематики свої коефіцієнти. На дроп має стояти мінімум, або мікс:</p>
+				<div class="priceCalculated__row">
+					<div class="priceCalculated__col">
+						<p class="label label_yellow">від 1–2 шт.</p>
+						<p>OutReach посилань з DR 50+</p>
+					</div>
+					<div class="priceCalculated__divider"><p>або</p></div>
+					<div class="priceCalculated__col">
+						<p class="label label_green">від 7 шт.</p>
+						<p>Guest-post</p>
+					</div>
+					<div class="priceCalculated__divider"><p>або</p></div>
+					<div class="priceCalculated__col">
+						<p class="label label_red">від 30 шт.</p>
+						<p>Ручних Submit/Crowd</p>
+					</div>
+					<div class="priceCalculated__divider"><p>або</p></div>
+					<div class="priceCalculated__col">
+						<p class="label label_violet">від 2–20 шт.</p>
+						<p>Пироги</p>
+					</div>
+				</div>
+				<p class="label-2">Клеємо дропи з ціною від 150$</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Ми беремо дропи: / Вміємо їх обробляти: -->
 	<div class="ourSkills">
 		<div class="container padding-wrap">
 			<div class="ourSkills__row">
@@ -109,10 +166,10 @@
 				</div>
 				<div class="launchingDrops__row launchingDrops__row_4">
 					<div class="launchingDrops__col">
-						<button class="btn btn_white w-100">Переглянути вільні слоти</button>
+						<button class="btn btn_white w-100 js-show-popup">Переглянути вільні слоти</button>
 					</div>
 					<div class="launchingDrops__col">
-						<button class="btn btn_blue w-100">Замовити посилання</button>
+						<button class="btn btn_blue w-100 js-show-popup">Замовити посилання</button>
 					</div>
 				</div>
 			</div>
@@ -128,7 +185,7 @@
 					<p class="text-medium">PBN-B2 — це PageRank</p>
 				</div>
 				<div class="youWant__col">
-					<button class="btn-3">Дізнатись більше</button>
+					<a class="btn-3" href="https://pbn-b2.workingdrops.com" target="_blank">Дізнатись більше</a>
 				</div>
 			</div>
 			<div class="youWant__row youWant__row_footer">
@@ -141,7 +198,7 @@
 					</ul>
 				</div>
 				<div class="youWant__col">
-					<button class="btn-3">Замовити посилання</button>
+					<button class="btn-3 js-show-popup">Замовити посилання</button>
 				</div>
 			</div>
 		</div>
@@ -166,7 +223,33 @@
 					</ul>
 					<img class="orderYourself__img" src="img/circle.png" alt="">
 				</div>
-				<button class="btn btn_blue">Замовити особисті PBN-21</button>
+				<button class="btn btn_blue js-show-popup" style="margin: 0 auto;">Замовити особисті PBN-21</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="js-popup">
+		<div class="popup__overlay" id="js-popup-overlay"></div>
+		<div class="popup__body nlc-mb-32" id="js-popup-body">
+			<p class="text-medium">Пишіть нам</p>
+			<p>Людяна служба підтримки у зручних для вас месенджерах</p>
+			<div class="popup__row">
+				<a href="https://t.me/WorkingDrops_bot" class="socials">
+					<img class="socials__telegram" src="img/telegram.svg" alt="">
+					<span class="socials__text">Telegram</span>
+				</a>
+				<a href="viber://pa?chatURI=workingdrops/" class="socials">
+					<span class="socials__viber">
+						<img src="img/viber.png" alt="">
+					</span>
+					<span class="socials__text">Telegram</span>
+				</a>
+				<a href="viber://pa?chatURI=workingdrops/" class="socials">
+					<span class="socials__email">
+						<img src="img/email.svg" alt="">
+					</span>
+					<span class="socials__text">Email</span>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -175,12 +258,14 @@
 		<div class="container footer__body">
 			<div class="footer__row">
 				<div class="footer__links">
-					<a href="">Privacy Policy</a>
-					<a href="">Cookie Policy</a>
+					<a href="https://pbn-b2.workingdrops.com/ru/privacy-policy">Privacy Policy</a>
+					<a href="https://pbn-b2.workingdrops.com/ru/cookie-policy">Cookie Policy</a>
 				</div>
 				<span>© 2023 workingdrops.com</span>
 			</div>
 		</div>
 	</footer>
+
+	<script src="js/script.js"></script>
 </body>
 </html>

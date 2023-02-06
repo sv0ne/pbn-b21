@@ -1,15 +1,37 @@
-$(document).ready(function () {
-	var w = $(window).outerWidth();
-	var h = $(window).outerHeight();
-	var isMobile = ('ontouchstart' in window);
-	const $body = $('body');
-	const BREAKPOINT_md1 = 1343;
-	const BREAKPOINT_1045 = 1044.98;
-	const BREAKPOINT_md2 = 992.98;
-	const BREAKPOINT_872 = 871.98;
-	const BREAKPOINT_md3 = 767.98;
-	const BREAKPOINT_552 = 551.98;
-	const BREAKPOINT_md4 = 479.98;
-
-	
+/* Показать попап с ссылками */
+document.querySelectorAll(".js-show-popup").forEach(function(element) {
+  element.addEventListener("click", function() {
+    showPopup();
+  });
 });
+
+/* Скрыть попап с ссылками */
+document.getElementById("js-popup-overlay").addEventListener("click", function() {
+  hidePopup()
+});
+
+/* Показать попап */
+function showPopup(){
+	document.getElementById("js-popup").classList.add("active");
+    document.getElementsByTagName("body")[0].classList.add("lock");
+    document.getElementById("js-popup-body").classList.add("show");
+}
+
+/* Скрыть попап */
+function hidePopup(){
+	document.getElementById("js-popup-body").classList.remove("show");
+	document.getElementById("js-popup-body").classList.add("hide");
+	if (window.innerWidth < 767.98) {
+		setTimeout(function() {
+			hidePopupR();
+		}, 150);
+	}else{
+		hidePopupR();
+	}
+}
+
+function hidePopupR(){
+	document.getElementById("js-popup").classList.remove("active");
+	document.getElementsByTagName("body")[0].classList.remove("lock");
+	document.getElementById("js-popup-body").classList.remove("hide");
+}
