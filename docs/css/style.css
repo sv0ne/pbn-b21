@@ -710,6 +710,15 @@ video {
 }
 
 .header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 16px;
 }
 
@@ -758,7 +767,19 @@ video {
   -webkit-transform: rotate(-10deg);
       -ms-transform: rotate(-10deg);
           transform: rotate(-10deg);
+  -webkit-transition: all 0.15s ease 0s;
+  -o-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s;
   margin: 16px 0;
+}
+
+.fScreen__image1:hover {
+  -webkit-transform: rotate(-10deg) scale(1.1);
+      -ms-transform: rotate(-10deg) scale(1.1);
+          transform: rotate(-10deg) scale(1.1);
+  -webkit-transition: all 0.15s ease 0s;
+  -o-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s;
 }
 
 .fScreen__image2 {
@@ -1682,6 +1703,18 @@ position sticky у блока .stickyBlock */
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .header__body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .header__btn {
+    display: none;
   }
 }
 

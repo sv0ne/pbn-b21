@@ -1,7 +1,18 @@
 .header {
 	background-color: $blue;
 	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		padding: 16px;
+		@media (max-width:600px) {
+		    justify-content: center;
+		}
+	}
+	&__btn{
+		@media (max-width:600px) {
+		    display: none;
+		}
 	}
 }
 
@@ -52,7 +63,12 @@
 	}
 	&__image1{
 		transform: rotate(-10deg);
+		transition: all 0.15s ease 0s;
 		margin: 16px 0;
+		&:hover{
+			transform: rotate(-10deg) scale(1.1);
+			transition: all 0.15s ease 0s;
+		}
 	}
 	&__image2{
 		margin-top: 10px;
