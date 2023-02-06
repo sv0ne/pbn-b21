@@ -19,7 +19,9 @@
 			background: rgb(63, 105, 255, 0.9);
 		}
 	}
-	
+	&:hover{
+		text-decoration: none;
+	}
 	@media (max-width:$md3+px) {
 	    padding: 24px;
 	}
